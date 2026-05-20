@@ -135,7 +135,6 @@ export const styles = css`
           height: calc(100dvh);
         }
       }
-
       ul {
         width: 100%;
         height: 70%;
