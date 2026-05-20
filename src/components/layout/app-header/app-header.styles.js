@@ -31,16 +31,21 @@ export const styles = css`
       height: 100px;
       padding: 0 70px;
     }
-
-    picture {
+    a {
       height: 100%;
       display: flex;
       align-items: center;
-      img {
-        height: 75%;
-        width: auto;
+      picture {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        img {
+          height: 75%;
+          width: auto;
+        }
       }
     }
+
     #hamburguer-button {
       height: 50%;
       aspect-ratio: 1/1;
@@ -112,7 +117,7 @@ export const styles = css`
         right: 0;
         left: auto;
         width: 0;
-        height: calc(100vh - 100px);
+        height: calc(100dvh);
       }
 
       @media screen and (min-width: 1024px) {
@@ -121,15 +126,13 @@ export const styles = css`
         left: unset;
         height: 90%;
         width: 50%;
-         &.active {
-          height: 90%;
-         }
       }
 
       &.active {
-        height: calc(100vh - 70px);
+        height: calc(100dvh);
         @media screen and (min-width: 768px) {
           width: 50%;
+          height: calc(100dvh);
         }
       }
 

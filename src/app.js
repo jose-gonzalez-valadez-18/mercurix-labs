@@ -7,7 +7,8 @@ import "./components/layout/app-footer/app-footer";
 export class AppRoot extends LitElement {
   static styles = css`
     main {
-      min-height: 100vh;
+      width: 100vw;
+      box-sizing: border-box;
     }
   `;
 

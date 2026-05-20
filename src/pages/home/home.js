@@ -1,9 +1,8 @@
 import { LitElement, html, css } from "lit";
 
 import { styles } from "./home.styles";
-
+import "../../components/sections/hero-main/hero-main";
 export class PageHome extends LitElement {
-
   static styles = styles;
 
   static properties = { mensaje: { type: String } };
@@ -14,7 +13,7 @@ export class PageHome extends LitElement {
   }
 
   render() {
-    return html` <p>${this.mensaje}</p> `;
+    return html` <hero-main></hero-main> `;
   }
 }
 customElements.define("page-home", PageHome);

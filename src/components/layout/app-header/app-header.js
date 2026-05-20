@@ -84,11 +84,12 @@ export class AppHeader extends LitElement {
       <section class="header-space"></section>
 
       <header>
-        <picture>
-          <source media="(max-width: 767px)" srcset="/assets/brand/logo-col.webp" />
+        <a href="/"
+          ><picture>
+            <source media="(max-width: 767px)" srcset="/assets/brand/logo-col.webp" />
 
-          <img src="/assets/brand/logo-row.webp" alt="Mercurix Labs" />
-        </picture>
+            <img src="/assets/brand/logo-row.webp" alt="Mercurix Labs" /> </picture
+        ></a>
 
         <nav class=${this.menuOpen ? "active" : ""}>
           <ul>
