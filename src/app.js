@@ -6,8 +6,13 @@ import "./components/layout/app-footer/app-footer";
 
 export class AppRoot extends LitElement {
   static styles = css`
+    :host {
+      display: block;
+      width: 100%;
+      margin: 0;
+    }
     main {
-      width: 100vw;
+      width: 100%;
       box-sizing: border-box;
     }
   `;
