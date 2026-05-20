@@ -2,7 +2,7 @@ import { css } from "lit"; // O la librería que estés usando
 
 export const styles = css`
   footer {
-    width: 100vw;
+    width: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
