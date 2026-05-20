@@ -1,0 +1,28 @@
+:root {
+  color-scheme: light dark;
+  background-color: #ffffff;
+      font-family: "Inter", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+background-color:  #100029; }
+}
+
+body {
+  margin: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  &.menu-open {
+  overflow: hidden;        }
+
+}
+
+
