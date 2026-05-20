@@ -13,6 +13,8 @@ export const styles = css`
     box-shadow:
       0 -8px 28px rgba(37, 4, 80, 0.35),
       0 -0px 22px rgba(51, 16, 93, 0.35);
+    box-sizing: border-box;
+
     @media screen and (min-width: 1024px) {
       padding: 20px 70px;
     }
