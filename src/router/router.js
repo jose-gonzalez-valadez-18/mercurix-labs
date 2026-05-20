@@ -1,6 +1,7 @@
 import { Router } from "@vaadin/router";
 
 import "../pages/home/home";
+import "../pages/services/services";
 
 export const initRouter = (outlet) => {
   const router = new Router(outlet);
@@ -9,6 +10,10 @@ export const initRouter = (outlet) => {
     {
       path: "/",
       component: "page-home",
+    },
+    {
+      path: "/services",
+      component: "page-services",
     },
   ]);
 

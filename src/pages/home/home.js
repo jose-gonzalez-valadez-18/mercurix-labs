@@ -2,6 +2,7 @@ import { LitElement, html, css } from "lit";
 
 import { styles } from "./home.styles";
 import "../../components/sections/hero-main/hero-main";
+import "../../components/ui/app-title/app-title";
 export class PageHome extends LitElement {
   static styles = styles;
 
@@ -13,7 +14,11 @@ export class PageHome extends LitElement {
   }
 
   render() {
-    return html` <hero-main></hero-main> `;
+    return html`
+      <hero-main></hero-main>
+      <app-title text="Servicios Populares"></app-title>
+
+    `;
   }
 }
 customElements.define("page-home", PageHome);

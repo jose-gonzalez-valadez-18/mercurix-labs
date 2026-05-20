@@ -4,7 +4,7 @@ export const styles = css`
   .header-space {
     width: 100%;
     height: 70px;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 481px) {
       height: 100px;
     }
   }
@@ -27,7 +27,7 @@ export const styles = css`
     padding: 0 20px;
     box-sizing: border-box;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 481px) {
       height: 100px;
       padding: 0 70px;
     }
@@ -56,7 +56,7 @@ export const styles = css`
       border: none;
       background-color: #33105d;
       color: #f0e7fa;
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 993px) {
         display: none;
       }
     }
@@ -90,7 +90,7 @@ export const styles = css`
         transition: transform 0.4s ease-in-out;
       }
 
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 993px) {
         width: 15%;
         cursor: pointer;
         font-size: 15px;
@@ -112,7 +112,7 @@ export const styles = css`
       align-items: center;
       z-index: 99999;
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 481px) {
         top: 100px;
         right: 0;
         left: auto;
@@ -120,7 +120,7 @@ export const styles = css`
         height: calc(100dvh - 100px);
       }
 
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 993px) {
         position: unset;
         top: unset;
         left: unset;
@@ -130,7 +130,7 @@ export const styles = css`
 
       &.active {
         height: calc(100dvh - 70px);
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 481px) {
           width: 50%;
           height: calc(100dvh - 100px);
         }
@@ -144,23 +144,23 @@ export const styles = css`
         flex-direction: column;
         padding: 0;
         margin: auto;
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 993px) {
           height: 90%;
           flex-direction: row;
           justify-content: space-between;
         }
         li {
+          width: auto;
+          height: auto;
           display: flex;
           justify-content: center;
           align-items: center;
           border-bottom: 3px solid #33105d;
           list-style: none;
-          padding: 5px;
 
-          @media screen and (min-width: 1024px) {
+          @media screen and (min-width: 993px) {
             border-bottom: 3px solid #33105d;
             position: relative;
-            padding: 10px 15px;
             cursor: pointer;
 
             &::before,
@@ -205,10 +205,14 @@ export const styles = css`
             }
           }
           a {
+            width: fit-content;
+            height: fit-content;
             text-decoration: none;
             color: white;
             font-size: 18px;
             font-weight: 500;
+            padding: 10px 15px;
+            z-index: 4;
           }
         }
       }

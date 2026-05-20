@@ -16,7 +16,7 @@ export class HeroMain extends LitElement {
       <section class="hero-main">
         <article class="content">
           <p class="tag">PREMIUM WEB DEVELOPMENT</p>
-          <h2>Arquitectos de Experiencias Digitales</h2>
+          <p class="title">Arquitectos de <br /><b>Experiencias</b> <br />Digitales</p>
           <p class="description">
             We engineer high-performance websites that bridge the gap between complex digital architecture and intuitive human interaction. Scalable, secure, and visually stunning.
           </p>
@@ -26,6 +26,7 @@ export class HeroMain extends LitElement {
           </div>
         </article>
         <article class="illustration">
+          <img src="/public/assets/pc/setup-pc.webp" alt="" />
         </article>
       </section>
     `;

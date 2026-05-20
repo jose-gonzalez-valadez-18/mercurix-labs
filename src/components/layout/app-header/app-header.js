@@ -67,12 +67,13 @@ export class AppHeader extends LitElement {
   }
 
   handleOutsideClick(e) {
+    // Usamos composedPath() para detectar qué se clicó realmente dentro del Shadow DOM
+    const path = e.composedPath();
     const nav = this.renderRoot.querySelector("nav");
     const button = this.renderRoot.querySelector("#hamburguer-button");
 
-    const clickedInsideNav = nav.contains(e.target);
-
-    const clickedButton = button.contains(e.target);
+    const clickedInsideNav = path.includes(nav);
+    const clickedButton = path.includes(button);
 
     if (this.menuOpen && !clickedInsideNav && !clickedButton) {
       this.closeMenu();
@@ -83,7 +84,8 @@ export class AppHeader extends LitElement {
     return html`
       <section class="header-space"></section>
 
-      <header>
+      <!-- Al hacer clic en cualquier parte del header (links), cerramos el menú -->
+      <header @click=${() => this.menuOpen && this.closeMenu()}>
         <a href="/"
           ><picture>
             <source media="(max-width: 767px)" srcset="/assets/brand/logo-col.webp" />
@@ -93,7 +95,7 @@ export class AppHeader extends LitElement {
 
         <nav class=${this.menuOpen ? "active" : ""}>
           <ul>
-            <li><a href="">Services</a></li>
+            <li><a href="/services">Services</a></li>
             <li><a href="">Portfolio</a></li>
             <li><a href="">Contact</a></li>
             <li><a href="">About</a></li>
