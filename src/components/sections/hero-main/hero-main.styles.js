@@ -7,6 +7,8 @@ export const styles = css`
     display: flex;
     flex-direction: column;
     padding: 20px;
+    box-sizing: border-box;
+
     .content {
       width: 100%;
       height: 100%;

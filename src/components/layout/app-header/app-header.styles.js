@@ -117,7 +117,7 @@ export const styles = css`
         right: 0;
         left: auto;
         width: 0;
-        height: calc(100dvh);
+        height: calc(100dvh - 100px);
       }
 
       @media screen and (min-width: 1024px) {
@@ -129,10 +129,10 @@ export const styles = css`
       }
 
       &.active {
-        height: calc(100dvh);
+        height: calc(100dvh - 70px);
         @media screen and (min-width: 768px) {
           width: 50%;
-          height: calc(100dvh);
+          height: calc(100dvh - 100px);
         }
       }
       ul {
