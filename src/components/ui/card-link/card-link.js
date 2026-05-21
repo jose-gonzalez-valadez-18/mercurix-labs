@@ -19,10 +19,8 @@ export class AppCardLink extends LitElement {
   render() {
     return html`
       <article class="card-link">
-        <div class="image-container">
-          <img src="/public/assets/services/web.webp" alt="" />
-          <p class="tag">PAGINA WEB</p>
-        </div>
+        <p class="tag">PAGINA WEB</p>
+        <div class="image-container" style="background-image: url('/src/assets/services/web.webp')"></div>
         <div class="text-container">
           <p class="copy">Sube de nivel tu negocio con presencia digital</p>
           <p class="tecnology">Desarrollo AstroJS y NextJs con expertos</p>

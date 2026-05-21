@@ -46,8 +46,9 @@ export const styles = css`
         font-size: 10px;
         padding: 5px 10px;
         border-radius: 15px;
-        background-color: #1d1b20;
-        border: 2px solid #423a4c;
+        background-color: #4cd7f630;
+        border: 1px solid #4cd7f6;
+        color: white;
         @media screen and (min-width: 481px) {
           font-size: 16px;
         }

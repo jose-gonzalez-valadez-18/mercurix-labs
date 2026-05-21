@@ -14,81 +14,65 @@ export const styles = css`
     @media screen and (min-width: 481px) {
       padding: 0 70px;
     }
-  }
 
-  .carousel-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
+    .carrousel-container {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
 
-  .nav-button {
-    position: absolute;
-    top: 45%;
-    transform: translateY(-50%);
-    z-index: 10;
-    background: rgba(10, 0, 26, 0.6);
-    border: 1px solid #4cd7f6;
-    color: #4cd7f6;
-    width: 20px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(4px);
-    padding: 0;
-  }
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #4cd7f6;
+        color: #4cd7f6;
+        position: absolute;
+        top: 50%;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #00000080;
+        z-index: 4;
+        @media screen and (min-width: 481px) {
+          width: 60px;
+          height: 60px;
+          font-size: 20px;
+          top: 50%;
+        }
+      }
+      .prev {
+        left: 0;
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+      .next {
+        right: 0;
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
 
-  .nav-button:hover {
-    background: #4cd7f6;
-    color: #0a001a;
-    box-shadow: 0 0 15px rgba(76, 215, 246, 0.5);
-  }
+      .carrousel-wrapper {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
 
-  .prev {
-    left: 0;
-  }
+        &::-webkit-scrollbar {
+          display: none;
+        }
 
-  .next {
-    right: 0;
-  }
-
-  .carousel-track {
-    display: flex;
-    width: 100%;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  app-card-link {
-    flex: 0 0 100%;
-    box-sizing: border-box;
-    padding: 10px;
-  }
-
-  .carousel-nav {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    padding: 20px 0;
-  }
-
-  .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: 1px solid #4cd7f6;
-    background-color: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    padding: 0;
-
-    &.active {
-      background-color: #4cd7f6;
-      transform: scale(1.2);
+        app-card-link {
+          min-width: 100%;
+          flex: 0 0 100%;
+          scroll-snap-align: start;
+        }
+      }
     }
   }
 `;

@@ -2,43 +2,41 @@ import { css } from "lit";
 
 export const styles = css`
   .card-link {
-    width: 100%;
     height: fit-content;
     display: flex;
     flex-direction: column;
     background-color: #181818;
     border-radius: 10px;
     border: 1px solid #33105d;
-
+    padding: 10px;
+    .tag {
+      display: flex;
+      width: fit-content;
+      font-size: 10px;
+      padding: 5px 10px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, #2a0b4d 0%, #33105d 60%, #5d2d91 100%);
+      box-shadow:
+        0 0 15px #d8b9ff30,
+        inset 0 0 10px #d8b9ff10;
+      color: white;
+    }
     .image-container {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
-      aspect-ratio: 2/1;
+      aspect-ratio: 3/2;
       margin: 0 auto;
-      img {
-        width: 90%;
-        height: 90%;
-        object-fit: cover;
-        border-radius: 10px;
-      }
-      .tag {
-        position: absolute;
-        top: 10px;
-        right: -30px;
-        transform: translateX(-50%);
-        color: white;
-        background-color: black;
-        border: 1px solid white;
-        padding: 5px 15px;
-        border-radius: 50px;
-        font-size: 10px;
-      }
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 10px;
+      margin-bottom: 10px;
     }
     .text-container {
-      width: 90%;
+      width: 100%;
       height: fit-content;
       display: flex;
       flex-direction: column;

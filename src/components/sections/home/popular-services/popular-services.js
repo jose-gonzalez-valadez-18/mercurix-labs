@@ -7,44 +7,38 @@ import { icons } from "../../../../assets/icons/icons";
 export class PopularServices extends LitElement {
   static styles = styles;
 
-  static properties = {
-    activeIndex: { type: Number },
-  };
-
-  constructor() {
-    super();
-    this.activeIndex = 0;
+  firstUpdated() {
+    this.wrapper.addEventListener("scroll", () => {
+      this.requestUpdate();
+    });
   }
 
-  _goTo(index) {
-    this.activeIndex = index;
+  nextSlide() {
+    this.wrapper.scrollLeft += this.wrapper.clientWidth;
   }
 
-  _prev() {
-    this.activeIndex = this.activeIndex > 0 ? this.activeIndex - 1 : 2;
+  prevSlide() {
+    this.wrapper.scrollLeft -= this.wrapper.clientWidth;
   }
 
-  _next() {
-    this.activeIndex = this.activeIndex < 2 ? this.activeIndex + 1 : 0;
+  get wrapper() {
+    return this.renderRoot.querySelector(".carrousel-wrapper");
   }
 
   render() {
     return html`
       <section class="popular-services">
-        <div class="carousel-container">
-          <button class="nav-button prev" @click=${this._prev} aria-label="Anterior">${icons.arrowLeft}</button>
-
-          <div class="carousel-track" style="transform: translateX(-${this.activeIndex * 100}%);">
+        <div class="carrousel-container">
+          <button class="prev" ?disabled=${!this.wrapper || this.wrapper.scrollLeft <= 0} @click=${this.prevSlide}>${icons.arrowLeft}</button>
+          <div class="carrousel-wrapper">
             <app-card-link></app-card-link>
             <app-card-link></app-card-link>
             <app-card-link></app-card-link>
           </div>
 
-          <button class="nav-button next" @click=${this._next} aria-label="Siguiente">${icons.arrowRight}</button>
-        </div>
-
-        <div class="carousel-nav">
-          ${[0, 1, 2].map((i) => html` <button class="dot ${this.activeIndex === i ? "active" : ""}" @click=${() => this._goTo(i)} aria-label="Ir a slide ${i + 1}"></button> `)}
+          <button class="next" ?disabled=${this.wrapper?.scrollLeft + this.wrapper?.clientWidth >= this.wrapper?.scrollWidth - 5} @click=${this.nextSlide}>
+            ${icons.arrowRight}
+          </button>
         </div>
       </section>
     `;
