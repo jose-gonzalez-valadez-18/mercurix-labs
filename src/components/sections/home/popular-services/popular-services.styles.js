@@ -5,14 +5,12 @@ export const styles = css`
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0 20px;
+    padding: 20px 20px;
     box-sizing: border-box;
-    box-shadow:
-      0 8px 28px rgba(37, 4, 80, 0.35),
-      0 0 22px rgba(51, 16, 93, 0.35);
+    box-shadow: 0 8px 28px rgba(37, 4, 80, 0.35);
 
     @media screen and (min-width: 481px) {
-      padding: 0 70px;
+      padding: 40px 70px;
     }
 
     .carrousel-container {
@@ -39,6 +37,9 @@ export const styles = css`
           font-size: 20px;
           top: 50%;
         }
+        @media screen and (min-width: 993px) {
+          display: none;
+        }
       }
       .prev {
         left: 0;
@@ -62,6 +63,11 @@ export const styles = css`
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
         scrollbar-width: none;
+        @media screen and (min-width: 993px) {
+          gap: 10px;
+          justify-content: space-around;
+          flex-wrap: wrap;
+        }
 
         &::-webkit-scrollbar {
           display: none;
@@ -71,6 +77,10 @@ export const styles = css`
           min-width: 100%;
           flex: 0 0 100%;
           scroll-snap-align: start;
+          @media screen and (min-width: 993px) {
+            min-width: 370px;
+            flex: 0 0 30%;
+          }
         }
       }
     }

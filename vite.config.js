@@ -5,4 +5,12 @@ export default defineConfig({
     host: "0.0.0.0",
     allowedHosts: true,
   },
+  build: {
+    rollupOptions: {
+      input: {
+        main: "index.html",
+        icons: "icons.html",
+      },
+    },
+  },
 });
