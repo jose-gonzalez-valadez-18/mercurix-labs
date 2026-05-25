@@ -13,8 +13,23 @@ export class WhatSetsUsApart extends LitElement {
         <article class="container">
           <div class="card">
             <span>${icons.lock}</span>
-            <h3></h3>
-            <p class="description"></p>
+            <h3>Precios Competitivos</h3>
+            <p class="description">Con el sistema de entrega expres en landigns pages web podaras recibir tu proyecto terminado a un precio increible.</p>
+          </div>
+          <div class="card">
+            <span>${icons.lock}</span>
+            <h3>Precios Competitivos</h3>
+            <p class="description">Con el sistema de entrega expres en landigns pages web podaras recibir tu proyecto terminado a un precio increible.</p>
+          </div>
+          <div class="card">
+            <span>${icons.lock}</span>
+            <h3>Precios Competitivos</h3>
+            <p class="description">Con el sistema de entrega expres en landigns pages web podaras recibir tu proyecto terminado a un precio increible.</p>
+          </div>
+          <div class="card">
+            <span>${icons.lock}</span>
+            <h3>Precios Competitivos</h3>
+            <p class="description">Con el sistema de entrega expres en landigns pages web podaras recibir tu proyecto terminado a un precio increible.</p>
           </div>
         </article>
       </section>
