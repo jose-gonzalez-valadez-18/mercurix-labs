@@ -15,7 +15,7 @@ export const styles = css`
       0 -0px 22px rgba(51, 16, 93, 0.35);
     box-sizing: border-box;
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 768px) {
       padding: 20px 70px;
     }
 
@@ -24,7 +24,7 @@ export const styles = css`
       display: flex;
       flex-direction: column;
       margin-bottom: 20px;
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 993px) {
         flex-direction: row;
       }
       .info {
@@ -40,7 +40,7 @@ export const styles = css`
             width: 40%;
           }
 
-          @media screen and (min-width: 1024px) {
+          @media screen and (min-width: 993px) {
             width: 60%;
           }
         }
@@ -71,7 +71,7 @@ export const styles = css`
             flex-direction: row;
             justify-content: space-around;
 
-            @media screen and (min-width: 1024px) {
+            @media screen and (min-width: 993px) {
               flex-direction: column;
               width: fit-content;
               align-items: center;
@@ -83,7 +83,7 @@ export const styles = css`
               border-bottom: 3px solid #33105d;
               padding: 5px;
 
-              @media screen and (min-width: 1024px) {
+              @media screen and (min-width: 993px) {
                 border-bottom: 3px solid #33105d;
                 position: relative;
                 padding: 10px 15px;
@@ -181,7 +181,7 @@ export const styles = css`
       align-items: center;
       padding-top: 5px;
       border-top: 1px solid gray;
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 993px) {
         flex-direction: row;
         justify-content: space-between;
       }
@@ -192,14 +192,14 @@ export const styles = css`
         @media screen and (min-width: 768px) {
           font-size: 18px;
         }
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 993px) {
           width: 60%;
           text-align: left;
         }
       }
       nav {
         width: 100%;
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 993px) {
           width: 40%;
         }
         ul {
@@ -212,7 +212,7 @@ export const styles = css`
           li {
             border-bottom: 3px solid #33105d;
             padding: 5px;
-            @media screen and (min-width: 1024px) {
+            @media screen and (min-width: 993px) {
               border-bottom: 3px solid #33105d;
               position: relative;
               padding: 10px 15px;

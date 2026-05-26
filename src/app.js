@@ -6,9 +6,16 @@ import "./components/layout/app-footer/app-footer";
 
 export class AppRoot extends LitElement {
   static styles = css`
+    :host {
+      display: block;
+      width: 100%;
+    }
     main {
+      display: block;
       width: 100%;
       box-sizing: border-box;
+      /* Evita que scroll horizontal rompa el layout en móviles */
+      overflow-x: hidden;
     }
   `;
 
