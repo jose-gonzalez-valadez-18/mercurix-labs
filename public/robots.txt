@@ -1,0 +1,11 @@
+# Permite que todos los robots indexen el sitio
+User-agent: *
+Allow: /
+
+# Bloquea rutas que no quieres que aparezcan en buscadores (ejemplos comunes)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /config/
+
+# Indica dónde está tu mapa del sitio (reemplaza con tu dominio real)
+Sitemap: https://www.tusitio.com/sitemap.xml
