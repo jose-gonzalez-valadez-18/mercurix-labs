@@ -26,7 +26,7 @@ export class HeroMain extends LitElement {
           </div>
         </article>
         <article class="illustration">
-          <img src="/public/assets/pc/setup-pc.webp" alt="" />
+          <img src="/assets/pc/setup-pc.webp" alt="" />
         </article>
       </section>
     `;
